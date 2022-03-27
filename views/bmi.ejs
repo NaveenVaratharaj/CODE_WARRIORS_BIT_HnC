@@ -1,0 +1,52 @@
+<%- include("header.ejs") %> 
+
+<div class="container-fluid bmi_calculator">
+    <head>
+        <meta charset="utf-8" />
+        <title>BMI Calculator</title>
+    </head>
+    <script type="text/javascript">
+        function BMI() {
+            var h = document.getElementById("h").value;
+            var w = document.getElementById("w").value;
+            var bmi = w / (((h / 100) * h) / 100);
+            var bmio = bmi.toFixed(2);
+    
+            if (bmi < 18.5) {
+                document.getElementById("result").innerHTML =
+                    " You are UnderWeight and Your BMI is " + bmio;
+            } else if (bmi > 18.5 && bmi < 24.9) {
+                document.getElementById("result").innerHTML =
+                    " You are Healthy and Your BMI is " + bmio;
+            } else if (bmi > 24.9 && bmi < 29.9) {
+                document.getElementById("result").innerHTML =
+                    " You are OverWeight and Your BMI is " + bmio;
+            } else {
+                document.getElementById("result").innerHTML =
+                    " You are obese and Your BMI is " + bmio;
+            }
+        }
+    </script>
+    
+    <body>
+        <div>
+            <h2 style="text-align: center; margin-bottom: 20px; color: orange;">BMI Calculator</h2>
+            <!-- <p class="text">Height</p> -->
+
+            <div class="mb-3">
+                <label for="h"  class="form-label">Enter your height</label>
+                <input type="number" name="username" class="form-control" id="h" aria-describedby="emailHelp">
+            </div>
+
+            <div class="mb-3">
+                <label for="w"  class="form-label">Enter your weight</label>
+                <input type="number" name="username" class="form-control" id="w" aria-describedby="emailHelp">
+            </div>
+
+            <button id="btn" class="btn btn-success" onClick="BMI()">Calculate</button> <br>
+            <p id="result" style="margin-top: 20px;"></p>
+
+        </div>
+
+        
+    </body>

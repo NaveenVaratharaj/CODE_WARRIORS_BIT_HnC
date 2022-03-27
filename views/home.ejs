@@ -1,0 +1,138 @@
+<%- include("header.ejs")  %> 
+
+<section id="intro">
+    <div class="container-fluid container_1 intro_cont">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <h3 id="heading1">Are you a Diabetic? Don't worry we are here to help you,<span id="span_head">We offer everything to stay healthy!</span><h3 id="heading2"><div id="text">"We offer everything to stay safe!"</div></h3>	
+				</h3>
+				<div class="col-lg-12 col-md-12 col-sm-12 top-btn">
+					<div class="btn btn-success button_top" onclick="location.href='#explore_category'">Explore More</div>
+				</div>
+			<div class="ripple-background">
+				<div class="circle xxlarge shade1"></div>
+				<div class="circle xlarge shade2"></div>
+
+			</div>
+        </div>
+    </div>
+</section>
+
+<section id="explore_category">
+	<div class="container-fluid container_2">
+	  <div class="row">
+		<h1 id="explore_cat"></h1>
+		<div class=" cards col-lg-4 col-md-12 col-sm-12" data-aos="zoom-in">
+		  <div class="card border border-3">
+			<div class="card-header home_card_header">BMI Calculator</div>
+			<div class="card-body">
+			  <img class="image_cards" src="https://img.freepik.com/free-vector/losing-weight-female-nutritionist-cartoon-character-slimming-weightloss-dieting-counting-calories-overweight-man-with-hamburger_335657-3590.jpg?size=338&ext=jpg&ga=GA1.1.1067432074.1637487396" class="card-img vg">
+			  <h3 class="card-text">Body mass index (BMI) is a measure of body fat based on height and weight that applies to adult men and women.</h3>
+			  <button class="cardbtn btn btn-success" onclick="location.href='/bmi'">Go there</button>
+			</div>
+		  </div>
+		</div>
+		<div class="cards col-lg-4 col-md-12 col-sm-12">
+		  <div class="card border border-3">
+			<div class="card-header home_card_header">Sugar Checker</div>
+			<div class="card-body">
+			  <img class="image_card" src="https://img.freepik.com/free-vector/blood-pressure-screening-abstract-concept-vector-illustration-pharmacy-screening-facility-blood-pressure-self-check-clinical-examination-health-care-service-testing-program-abstract-metaphor_335657-4044.jpg?size=338&ext=jpg&ga=GA1.2.1067432074.1637487396" class="card-img di">
+			  <h3 class="card-text">Keeping your blood sugar level in check is the most essential factor that helps you counter diabetes</h3>
+			  <button class="cardbtn btn btn-success " onclick="location.href='/sugar-checker'">Go there</button>
+			</div>
+		  </div>
+		</div>
+		<div class="cards col-lg-4 col-md-12 col-sm-12">
+		  <div class="card border border-3">
+			<div class="card-header home_card_header">Recommended Foods</div>
+			<div class="card-body">
+			  <img class="image_card"src="https://img.freepik.com/free-vector/people-eating-delicious-food_23-2148450836.jpg?size=338&ext=jpg&ga=GA1.1.1067432074.1637487396" class="card-img me">
+			  <h3 class="card-text">Making the right food choices is an important way to keep your blood sugar at check </h3></h3>
+			  <button class="cardbtn btn btn-success" onclick="location.href='/foods'">Go there</button>
+			</div>
+		  </div>
+		</div>
+		<div class="cards col-lg-4 col-md-12 col-sm-12">
+		  <div class="card border border-3">
+			<div class="card-header home_card_header">Meditation</div>
+			<div class="card-body">
+			  <img style="height: 19.5rem" class="image_card" src="https://img.freepik.com/free-vector/man-meditating-concept_23-2148508453.jpg?w=740&t=st=1648301332~exp=1648301932~hmac=1cff0ad6f3c01fe1dfdfdd5dd0dc343d5f3c424edd76d42b85995791e6a36d7f" class="card-img sp">
+			  <h3 class="card-text">Meditation helps diabetic patients by minimizing stress, reducing blood sugar levels and decreases the risk of cardiovascular disease.</h3>
+			  <button class="cardbtn btn btn-success" onclick="location.href='/meditation'">Go there</button>
+			</div>
+		  </div>
+		</div>
+		<div class="cards col-lg-4 col-md-12 col-sm-12">
+		  <div class="card border border-3">
+			<div class="card-header home_card_header">Preferable Medicines</div>
+			<div class="card-body">
+			  <img style="height: 20rem" src="https://img.freepik.com/free-vector/illustrated-medical-stickers-set_23-2148967488.jpg?size=338&ext=jpg&ga=GA1.1.1067432074.1637487396" class="card-img sn">
+			  <h3 class="card-text">Medicines are used to control diabetes by keeping the blood sugar levels of diabetic patients normal</h3>
+			  <button class="cardbtn btn btn-success " onclick="location.href='/medicines'">Go there</button>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+  
+  <footer style="background-color: rgb(57, 9, 102); margin: 0;text-align:center;color: white; font-size: 2rem;">
+	  <p id="about">Made by Code Warriors Bit⭐</p>
+  </footer>
+
+
+<script>
+
+var _CONTENT = [ 
+	"We offer everything to stay healthy!", 
+
+];
+
+
+var _PART = 0;
+var _PART_INDEX = 0;
+var _INTERVAL_VAL;
+
+var _ELEMENT = document.querySelector("#text");
+var _CURSOR = document.querySelector("#cursor");
+
+// Implements typing effect
+function Type() { 
+	var text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+	_ELEMENT.innerHTML = text;
+	_PART_INDEX++;
+	if(text === _CONTENT[_PART]) {
+		// Hide the cursor
+		_CURSOR.style.display = 'none';
+
+		clearInterval(_INTERVAL_VAL);
+		setTimeout(function() {
+			_INTERVAL_VAL = setInterval(Delete, 50);
+		}, 1000);
+	}
+}
+
+function Delete() {
+	var text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+	_ELEMENT.innerHTML = text;
+	_PART_INDEX--;
+
+	if(text === '') {
+		clearInterval(_INTERVAL_VAL);
+
+		if(_PART == (_CONTENT.length - 1))
+			_PART = 0;
+		else
+			_PART++;
+		
+		_PART_INDEX = 0;
+
+		setTimeout(function() {
+			_CURSOR.style.display = 'inline-block';
+			_INTERVAL_VAL = setInterval(Type, 100);
+		}, 200);
+	}
+}
+
+_INTERVAL_VAL = setInterval(Type, 100);
+</script>

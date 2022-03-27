@@ -1,0 +1,45 @@
+<%- include('header.ejs') %>
+
+
+<div class="container-fluid bmi_calculator">
+    <head>
+        <meta charset="utf-8" />
+        <title>Sugar Level Checker</title>
+    </head>
+    <script type="text/javascript">
+        function myFunction() {
+           
+            
+        let sugar_level = document.getElementById("sugar_level").value
+        console.log(sugar_level)
+        if (sugar_level >= 70 && sugar_level <= 99) {
+            document.getElementById("result").innerHTML =
+                " Your blood sugar level is normal! ";
+        }
+        
+         else {
+            document.getElementById("result").innerHTML =
+                " You are diabetic.. ";
+        }
+
+    }
+    </script>
+    
+    <body>
+        <div>
+            <h2 style=" margin-bottom: 20px; color: orange;">Check Sugar Level</h2>
+            <!-- <p class="text">Height</p> -->
+
+
+            <div class="mb-3" style="margin-top: 60px;">
+                <label for="sugar_level"  class="form-label">Enter your sugar level before meals</label>
+                <input min="70" max="150" type="number" name="username" class="form-control" id="sugar_level" aria-describedby="emailHelp">
+            </div>
+
+            <button id="btn" class="btn btn-success" onClick="myFunction()">Calculate</button> <br>
+            <p id="result" style="margin-top: 20px;"></p>
+
+        </div>
+
+        
+    </body>

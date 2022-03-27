@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+#navbar_top{
+    color: rgb(0, 0, 0);
+}
+
+#navbar_top:hover{
+    color: rgb(12, 12, 12);
+}
+.container_1{
+    padding-left:70px;
+    background-color: rgb(70, 5, 131);
+    margin: 0;
+}
+
+.navigation{
+    font-size: 1.3rem;
+    margin-left: 25px;
+    font-weight: bold;
+    color:orange;
+}
+
+.navigation:hover{
+    color: rgb(216, 174, 255);
+}
+.btn_top{
+    font-size: 1.1rem;
+}
+
+.navbar-brand{
+    font-size: 2rem;
+}
+/* Section Intro */
+#intro{
+    background-color: blue;
+}
+
+.intro_cont{
+    padding-top: 3%;
+    padding-left: 100px;
+    color:white;
+}
+
+#heading1{
+    font-size: 2.2rem;
+    font-weight: bolder;
+    color: white;
+    margin-top: 10%;
+    text-align: center;
+}
+
+#heading2{
+    font-size: 2.2rem;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+}
+
+#span_head{
+    display: none;
+}
+#text {
+	display: inline-block;
+	vertical-align: middle;
+	color: orange;
+	letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+#cursor {
+	display: inline-block;
+	vertical-align: middle;
+	width: 3px;
+	height: 50px;
+	background-color: orange;
+	animation: blink .75s step-end infinite;
+}
+
+.navbar-toggler{
+    color: white;
+    background-color: rgb(246, 242, 242);
+}
+
+#button{
+    margin-top: 100px;
+}
+
+@keyframes blink {
+	from, to { 
+		background-color: transparent 
+	}
+	50% { 
+		background-color: orange; 
+	}
+}
+
+.top-btn{
+    display: grid;
+    margin-bottom: 20%;  
+}
+
+.button_top{
+    font-size: 25px;  
+    margin: auto;
+    margin-top: 50px;
+}
+
+
+.circle{
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    animation: ripple 15s infinite;
+    box-shadow: 0px 0px 1px 0px #508fb9;
+  }
+  .xxlarge{
+    width: 900px;
+    height: 1000px;
+    left: -500px;
+    bottom: -50px;
+  }
+  
+  .shade1{
+  opacity: 0.15;
+  }
+
+  .container_2{
+      padding: 5%;
+  }
+
+/* Explore */
+  #explore_category{
+    background-color: rgb(246, 239, 253);
+  }
+  #explore_cat{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2.5rem;
+  }
+  .cards{
+    padding-top: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(0.5px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .cards:hover, .cards:focus, .cards:active {
+    -webkit-transform: scale(0.1);
+    transform: scale(1.1);
+  }
+  .cardbtn{
+    background-color: rgb(70, 5, 131);;
+    text-align: center;
+  }
+  .image_card{
+      width: 20rem;
+      height: 22rem;
+      margin-left: 5%;
+  }
+  .card-text{
+    font-size: 1rem;
+  }
+  
+  .home_card_header{
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: orange;
+    background-color:rgb(70, 5, 131);
+  }
+  
+  .card-text{
+    padding: 10% 10%;
+    font-size: 1.2rem;
+  }
+  
+  .cardbtn{
+    float: right;
+  }
+  
+  .card:hover{
+    border-radius: 20px solid blue;
+    transform: translateX()(0.5deg);
+  }
+  
+  
+  .cardbtn:hover {
+    background: #9bc49b;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.3s;
+  }
+  
+  .card{
+    box-shadow: #064635;
+  }
+
+  .bmi_calculator {
+    background-color: rgb(246, 239, 253);
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    padding: 5%;
+    border: 2px solid rgb(70, 5, 131);
+    box-shadow: 5px 5px 5px  rgb(2, 2, 2);
+    display: inline;
+    height: 470px;
+    width: 480px;
+    margin-top: 5%;
+  }
+
+  #medicine{
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  #image_med{
+    margin-left: 40%;
+    margin-bottom: 4%;
+  }
+
+  .container_3{
+    width: 700px;
+    background-color: rgb(247, 247, 247);
+    margin-left: 25%;
+  }
+  
+@media (max-width: 768px) {
+    .container_1{
+        padding-left:30px;
+    }
+    
+    .intro_cont{
+        text-align: center;
+    }
+
+    .navigation{
+        margin-left: 0px;
+    }
+    #heading1{
+        margin-top: 10%;
+        font-size: 1.5rem;
+    }
+
+    #heading2{
+        font-size: 1.5rem;
+        display: none;
+    }
+
+    #span_head{
+        display: inline;
+        color: orange;
+    }
+
+    .circle{
+        display: none;
+    }
+    .shade1{
+        opacity: 0;
+    }
+}

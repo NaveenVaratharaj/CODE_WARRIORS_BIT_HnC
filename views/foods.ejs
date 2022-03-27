@@ -1,0 +1,129 @@
+<%- include ('header.ejs') %>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Healthy Food Checker</title>
+</head>
+
+<script type="text/javascript">
+    function BMI() {
+        var h = document.getElementById("h").value;
+        const food = [
+            "apple",
+            "Fatty fish",
+            "salmon",
+            "sardines",
+            "herring",
+            "anchovies",
+            "mackerel",
+            "beans",
+            "egg",
+            "milk",
+            "yogurt",
+            "green leaves",
+            "tomato",
+            "berry",
+            "fish",
+            "nuts",
+            "whole grains",
+            "citrus fruits",
+            "cherry",
+            "brocolli",
+            "avocados",
+            "chia seeds",
+            "olive oil",
+            "flax seeds",
+            "vinegar",
+            "apple cider vinegar",
+            "strawberries",
+            "garlic",
+            "squash",
+            "shirataki noodles",
+            "spinach",
+            "salmon",
+            "tuna",
+            "mackerel",
+            "spinach",
+            "kale",
+            "avocados",
+            "eggs",
+            "chia seeds",
+            "beans",
+            "greek yogurt",
+            "cheese",
+            "walnuts",
+            "almond",
+            "peanuts",
+            "asparagus",
+            "broccoli",
+            "olive oil",
+            "canola",
+            "flaxseeds",
+            "vinegar",
+            "apple cider vinegar",
+            "strawberries",
+            "garlic",
+            "squash",
+            "shirataki noodles",
+            "cabbage",
+            "mushrooms",
+            "bok choy",
+            "hummus",
+            "peppers",
+            "cinnamon",
+            "carrots",
+            "low-fat milk",
+            "tomato",
+            "cornmeal",
+            "barley",
+            "tofu",
+            "orange",
+            "melon",
+            "apples",
+            "banana",
+            "grapes",
+            "bread",
+            "pasta",
+            "tortillas",
+            "berries",
+            "chickpeas",
+            "quinoa",
+            "brown rice",
+            "oats",
+        ];
+        if (food.includes(h.toLowerCase())) {
+            document.getElementById("result").innerHTML = " You can eat  " + h;
+        } else {
+            document.getElementById("result").innerHTML =
+                " You should not eat " + h;
+        }
+    }
+</script>
+
+<body>
+    <!-- <div>
+        <h2>Healthy Food Checker</h2>
+        <p class="text">Enter Food Name:</p>
+        <input type="text" id="h" />
+        <p id="result"></p>
+        <button id="btn" onClick="BMI()">Check</button>
+        <p id="info">Eat Healthy ! Live Healthy</p>
+    </div> -->
+
+    <div class="container-fluid bmi_calculator">
+        <h2 style="text-align: center; margin-bottom: 20px; color: orange;">Food for you</h2>
+        <!-- <p class="text">Height</p> -->
+
+
+        <div class="mt-5">
+            <label for="w"  class="form-label">Enter the Food you want</label>
+            <input type="text" name="username" class="form-control" id="h" aria-describedby="emailHelp">
+        </div>
+
+        <button id="btn" class="btn btn-success mt-5" onClick="BMI()">Check</button> <br>
+        <p id="result" style="margin-top: 20px;"></p>
+
+    </div>
+</body>
+
+</html>
