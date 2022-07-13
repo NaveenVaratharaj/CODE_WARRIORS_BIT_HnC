@@ -24,7 +24,7 @@ We have been inspired by some of the medical websites that helps lot to the pati
 HTML, CSS
 Bootstrap
 JavaScript
-Express,Node 
+Express,Node JS
 Ejs
 
 ## 🌏 How does your project help?
@@ -37,4 +37,4 @@ We built this with the help and guidance of our professors.
 We were actually struggled in integrating the parts and we did this by looking into it deeper.
 
 ## 🚀 Future changes and improvements
-Changing the website into a complete dynamic one. We are planning to make it sonalised for each individual.
+Changing the website into a complete dynamic one. We are planning to make it personalised for each individual.
